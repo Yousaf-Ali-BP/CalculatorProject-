@@ -1,5 +1,6 @@
 body{
   margin: 1vw 1vh;
+  font-family: sans-serif;
 }
 .box{
   display: flex;
@@ -13,20 +14,82 @@ body{
   flex-direction: column;
   justify-content:space-between;
   align-items: center;
-  background-color: gray;
+  background-color: #888;
+  border-radius: 2%;
   width:90%;
   height: 70vh;
   max-height: 1200px;
   padding:2vh;
   margin: 0;
+  box-shadow: 0 4.8px 9.6px rgba(0,0,0,0.5),
+              inset 0 4.8px 9.6px rgba(255,255,255,0.5),inset 4.8px -4.8px 9.6px rgba(0,0,0,0.5);
 }
 .screen{
-  background-color: #fff;
+  margin-top: 2vh;
+  background-color: #f7f7f7;
   width:100%;
-  height: 8vh
+  height: 8vh;
+  border-bottom: 3.6px solid rgba(0,0,0,0.2);
 }
 .btn-pad{
-  background-color: peru;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
   width:100%;
   height:90vw;
+}
+.reset{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0 2vw;
+  padding:1.5vh 3vw;
+}
+#ac{
+  grid-column:1:
+}
+#c{
+  grid-column: 4;
+}
+.num-op{
+  padding: 1.5vh 3vw;
+  display: grid;
+  gap: 1.5vh 2vw;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+}
+#c,#ac,.button{
+  background-color: #f7f7f7;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8%;
+  box-shadow: -1.2px 2.4px 1.2px  rgba(0,0,0,0.3),inset 2.4px -4.8px 2.4px  rgba(0,0,0,0.2);
+  outline: none;
+  transition: background-color 0.2s,box-shadow 0.2s,transform 0.2s;
+}
+#c:active, #ac:active, .button:active {
+  box-shadow: inset 1.2px 2.4px 2.4px rgba(0,0,0,0.2);
+  transform: translateY(2px);
+}
+@media(min-width:720px){
+  #c,#ac,.button{
+    font-size: 4rem;
+    box-shadow: -3px 6px 3px  rgba(0,0,0,0.3),inset 6px -12px 6px  rgba(0,0,0,0.2);
+  }
+  .calc{
+    box-shadow: 0 12px 24px rgba(0,0,0,0.5),inset 0 12px 24px rgba(255,255,255,0.5),inset 12px -12px 24px rgba(0,0,0,0.5);
+  }
+  .screen{
+    border-bottom: 9px solid rgba(0,0,0,0.2);
+  }
+  #c:active,#ac:active,.button:active {
+    box-shadow: inset 3px 6px 6px rgba(0,0,0,0.2);
+    transform: translateY(5px);
+  }
+}
+#display{
+  background-color: #f7f7f7;
+  width:86.5vw;
+  border: none;
+  height: 8vh;
+  pointer-events:none;
+  border-radius: 0;
 }
