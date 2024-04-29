@@ -10,32 +10,33 @@
   <div class="box">
     <div class="calc">
       <div class="screen">
-        <input id="display" type="text">
+        <input id="display" type="text" value="0" readonly>
       </div>
       <div class="btn-pad">
         <div class="reset">
-          <button id="ac">AC</button>
-        <button id="c">C</button>
+          <button onclick="btnClick('AC')" id="ac">AC</button>
+        <button onclick="btnClick('C')" id="c">C</button>
         </div>
         <div class="num-op">
-        <button class="button">7</button>
-        <button class="button">8</button>
-        <button class="button">9</button>
-        <button class="button">÷</button>
-        <button class="button">4</button>
-        <button class="button">5</button>
-        <button class="button">6</button>
-        <button class="button">×</button>
-        <button class="button">1</button>
-        <button class="button">2</button>
-        <button class="button">3</button>
-        <button class="button">-</button>
-        <button class="button">0</button>
-        <button class="button">.</button>
-        <button class="button">=</button>
-        <button class="button">+</button>
+        <button onclick="btnClick(7)" class="button">7</button>
+        <button onclick="btnClick(8)" class="button">8</button>
+        <button onclick="btnClick(9)" class="button">9</button>
+        <button onclick="btnClick('/')" class="button">÷</button>
+        <button onclick="btnClick(4)" class="button">4</button>
+        <button onclick="btnClick(5)" class="button">5</button>
+        <button onclick="btnClick(6)" class="button">6</button>
+        <button onclick="btnClick('*')" class="button">×</button>
+        <button onclick="btnClick(1)" class="button">1</button>
+        <button onclick="btnClick(2)" class="button">2</button>
+        <button onclick="btnClick(3)" class="button">3</button>
+        <button onclick="btnClick('-')" class="button">-</button>
+        <button onclick="btnClick(0)" class="button">0</button>
+        <button onclick="btnClick('.')" class="button">.</button>
+        <button onclick="btnClick('=')" class="button">=</button>
+        <button onclick="btnClick('+')" class="button">+</button>
       </div>
     </div>
   </div>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
